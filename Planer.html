@@ -1,0 +1,544 @@
+<html lang="de">
+    <head>
+		<meta charset="utf-8">
+		<title>Ensemble Planer</title>
+		<meta name="description" content="Planer für die Ensemblewoche"/>
+		<meta name="author" content="Lando Walter">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="bootstrap-grid.css" media="all" />
+        <link rel="stylesheet" href="external.css" media="all" />
+    </head>
+    <body>
+        <main>
+            <div id="first-field">
+                <div class="responsive-table container">
+                    <h2 class="m0 center">Ensemble Planer</h2>
+                    <h3 class="m0">Ensembles einfügen</h3>
+                    <div>
+                        Im Format:<br />
+                        A 1,2,3<br />
+                        B 2,4,12<br />
+                        C 8,9,1<br />
+                        usw.<br />
+                        [Zahl][Leerzeichen][Nummern]<br />
+                    </div>
+
+                    <textarea class="user-input"></textarea>
+                    <div class="text">Nach jeder neuen Eingabe muss man einmal Einlesen. Danach kann man weiter zum Stundenplan.</div>
+                    <button id="read" class="btn">Einlesen von Ensembles</button>
+                    <button id="continue" class="btn hidden">Weiter zu Stundenplan</button>
+                    <div id="format-user-input">
+                        <span class="hidden">Folgende Zeilen konnten nicht eingelesen werden. Bitte Formatierung prüfen!</span>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="second-field" class="hidden">
+                <div class="responsive-table container">
+                    <div class="row bg-grey">
+                        <div class="col-2"></div>
+                        <div class="col-2">
+                            Raum 1<br />
+                            Dozent A
+                        </div>
+                        <div class="col-2">
+                            Raum 2<br />
+                            Dozent B
+                        </div>
+                        <div class="col-2">
+                            Raum 3<br />
+                            Dozent C
+                        </div>
+                        <div class="col-2">
+                            Raum 4<br />
+                            Dozent D
+                        </div>
+                        <div class="col-2">
+                            Raum 5<br />
+                            Dozent E
+                        </div>
+                    </div>
+
+                    <div class="row" data-number="0">
+                        <div class="col-2">
+                            10:00
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                    </div>
+
+                    <div class="row" data-number="1">
+                        <div class="col-2">
+                            10:45
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                    </div>
+
+                    <div class="row" data-number="2">
+                        <div class="col-2">
+                            11:30
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                    </div>
+
+                    <div class="row" data-number="3">
+                        <div class="col-2">
+                            12:30 Mittag
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                    </div>
+
+                    <div class="row" data-number="4">
+                        <div class="col-2">
+                            14:00
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                    </div>
+
+                    <div class="row" data-number="5">
+                        <div class="col-2">
+                            14:45
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                    </div>
+
+                    <div class="row" data-number="6">
+                        <div class="col-2">
+                            15:30
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                    </div>
+
+                    <div class="row" data-number="7">
+                        <div class="col-2">
+                            16:15
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                    </div>
+
+                    <div class="row" data-number="8">
+                        <div class="col-2">
+                            17:00
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                        <div class="col-2">
+                            <input type="text" max="1" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="center">
+                    <div id="toggle-buttons">
+                        <span>
+                            <label class="switch" data-target-id="legende">
+                                <input type="checkbox" />
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="text">Legende</span>
+                        </span>
+
+                        <span>
+                            <label class="switch" data-target-id="ensembleliste">
+                                <input type="checkbox" checked />
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="text">Ensembleliste</span>
+                        </span>
+
+                        <span>
+                            <label class="switch" data-target-id="ensembleverfuegbar">
+                                <input type="checkbox" checked />
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="text">Mögliche Ensembles pro Stunde</span>
+                        </span>
+
+                        <span>
+                            <label class="switch" data-target-id="fehlerprotokoll">
+                                <input type="checkbox" checked />
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="text">Fehlerprotokoll</span>
+                        </span>
+
+                        <a href="javascript:void(0)" id="drucken" disabled>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1"
+                                id="Layer_1"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 512 512"
+                                style="enable-background: new 0 0 512 512;"
+                                xml:space="preserve"
+                            >
+                                <g>
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M457.187,104.874h-43.471V25.179c0-10.345-8.387-18.732-18.732-18.732H117.017c-10.345,0-18.732,8.387-18.732,18.732     v79.696H54.813C24.589,104.874,0,129.464,0,159.688v206.586c0,30.223,24.589,54.813,54.813,54.813h43.466v65.735     c0,10.345,8.387,18.732,18.732,18.732h277.979c10.345,0,18.732-8.387,18.732-18.732v-65.735h43.466     c30.224,0,54.813-24.589,54.813-54.813V159.688C512,129.464,487.411,104.874,457.187,104.874z M135.749,43.91h240.504     c0,22.72,0,132.916,0,149.998H135.749C135.749,179.808,135.749,60.379,135.749,43.91z M376.258,468.088H135.742v-47.003h240.515     V468.088z M457.187,383.624c-16.319,0-383.467,0-402.375,0c-9.567,0-17.349-7.782-17.349-17.349V159.688     c0-9.567,7.782-17.351,17.349-17.351h43.471v51.571h-9.988c-10.345,0-18.732,8.387-18.732,18.732s8.387,18.732,18.732,18.732     c29.017,0,323.051,0,335.407,0c10.345,0,18.732-8.387,18.732-18.732s-8.387-18.732-18.732-18.732h-9.989v-51.571h43.471     c9.567,0,17.349,7.782,17.349,17.351v206.586h0.001C474.537,375.84,466.754,383.624,457.187,383.624z"
+                                            />
+                                            <circle cx="362.758" cy="294.599" r="17.874" />
+                                            <circle cx="412.859" cy="294.599" r="17.874" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            drucken
+                        </a>
+                    </div>
+
+                    <div id="legende">
+                        <h3 class="mb0">Legende</h3>
+                        <span class="bg-red">Rot</span>
+                        <span> = in dieser Gruppe gibt es einen Spieler, der in der Zeile doppelt belegt ist (prüfe das Fehlerprotokoll)</span><br />
+                        <span class="bg-orange">Orange</span>
+                        <span> = Gruppenbezeichnung konnte nicht zugeordnet werden (prüfe auf Leerzeichen und Schreibweise)</span><br />
+                        <span class="bg-yellow">Gelb</span>
+                        <span> = die Gruppe ist in der Zeile doppelt belegt</span>
+                    </div>
+
+                    <div id="ensembleliste">
+                        <h3 class="mb0">Liste der Ensembles die heute noch nicht eingeplant wurden:</h3>
+                        <div></div>
+                    </div>
+
+                    <div id="ensembleverfuegbar">
+                        <div>
+                            <h3 class="mb0">Mögliche Ensembles pro Stunde</h3>
+                            <div class="responsive-table container">
+                                <div class="row bg-grey">
+                                    <div class="col-2"></div>
+                                    <div class="col-10"><span style="color: red;">Rot</span> = heute noch gar nicht eingeplant ; <span> Schwarz</span> = bereits eingeplant, aber noch verfügbar für die Stunde</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        10:00
+                                    </div>
+                                    <div class="col-10"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        10:45
+                                    </div>
+                                    <div class="col-10"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        11:30
+                                    </div>
+                                    <div class="col-10"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        12:30 Mittag
+                                    </div>
+                                    <div class="col-10"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        14:00
+                                    </div>
+                                    <div class="col-10"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        14:45
+                                    </div>
+                                    <div class="col-10"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        15:30
+                                    </div>
+                                    <div class="col-10"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        16:15
+                                    </div>
+                                    <div class="col-10"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-2">
+                                        17:00
+                                    </div>
+                                    <div class="col-10"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="fehlerprotokoll">
+                        <h3 class="mb0">Fehlerprotokoll:</h3>
+                        <div id="fehler"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="third-field" class="hidden">
+                <h3 class="center underscore mb0">Probenplan Ensemblewoche <span class="year"></span></h3>
+                <h4 class="center">Tag: <span class="day"></span></h4>
+                <div class="responsive-table bold">
+                    <div class="row bg-grey">
+                        <div class="col-2"></div>
+                        <div class="col-2">
+                            Raum 1<br />
+                            Dozent A
+                        </div>
+                        <div class="col-2">
+                            Raum 2<br />
+                            Dozent B
+                        </div>
+                        <div class="col-2">
+                            Raum 3<br />
+                            Dozent C
+                        </div>
+                        <div class="col-2">
+                            Raum 4<br />
+                            Dozent D
+                        </div>
+                        <div class="col-2">
+                            Raum 5<br />
+                            Dozent E
+                        </div>
+                    </div>
+
+                    <div class="row" data-number="0">
+                        <div class="col-2">
+                            10:00
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                    </div>
+
+                    <div class="row" data-number="1">
+                        <div class="col-2">
+                            10:45
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                    </div>
+
+                    <div class="row" data-number="2">
+                        <div class="col-2">
+                            11:30
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                    </div>
+
+                    <div class="row" data-number="3">
+                        <div class="col-2">
+                            12:30 Mittag
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                    </div>
+
+                    <div class="row" data-number="4">
+                        <div class="col-2">
+                            14:00
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                    </div>
+
+                    <div class="row" data-number="5">
+                        <div class="col-2">
+                            14:45
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                    </div>
+
+                    <div class="row" data-number="6">
+                        <div class="col-2">
+                            15:30
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                    </div>
+
+                    <div class="row" data-number="7">
+                        <div class="col-2">
+                            16:15
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                    </div>
+
+                    <div class="row" data-number="8">
+                        <div class="col-2">
+                            17:00
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="global.js"></script>
+    </body>
+</html>

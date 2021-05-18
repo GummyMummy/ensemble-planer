@@ -1,0 +1,286 @@
+.hidden {
+    display: none;
+}
+
+#first-field,
+#second-field,
+#third-field {
+    margin-top: 5vh;
+}
+
+textarea.user-input {
+    width: 50vw;
+    height: 40vh;
+}
+
+#second-field .responsive-table,
+#third-field .responsive-table {
+    text-align: center;
+}
+
+#second-field .responsive-table > .row > div,
+#third-field .responsive-table > .row > div {
+    border: 1px black solid;
+}
+
+#second-field .responsive-table > .row:not(.bg-grey):nth-child(even),
+#third-field .responsive-table > .row:not(.bg-grey):nth-child(even) {
+    background: #ccc;
+}
+
+#second-field .responsive-table input {
+    max-width: 50px;
+}
+
+#third-field {
+    margin: 0 1vw;
+}
+#third-field .col-2 {
+    padding: 0;
+}
+
+#third-field > div > div.row:not(.bg-grey) > div.col-2 {
+    height: 35px;
+    line-height: 35px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underscore {
+    text-decoration: underline black;
+}
+
+.bg-grey {
+    background: grey;
+}
+
+.bg-red {
+    background: red;
+}
+
+.bg-yellow {
+    background: yellow;
+}
+
+.bg-orange {
+    background: orange;
+}
+
+.mb0,
+.m0 {
+    margin-bottom: 0;
+}
+.mt0,
+.m0 {
+    margin-top: 0;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px 0;
+}
+
+textarea {
+    border: 1px black solid;
+}
+
+.center {
+    text-align: center;
+}
+
+#toggle-buttons {
+    margin: 10px 0;
+}
+
+/* Buttons */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 39px;
+    height: 23px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    vertical-align: text-top;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196f3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#toggle-buttons span.text,
+#toggle-buttons #drucken {
+    line-height: 23px;
+    vertical-align: bottom;
+}
+
+#drucken svg {
+    height: 17px;
+    vertical-align: middle;
+}
+
+.eingeplant-gruen {
+	color: green;
+	text-decoration: underline;
+}
+
+/*
+Zuordnung Ensembles, für Markierungen
+*/
+.A .ensemble_A,
+.B .ensemble_B,
+.C .ensemble_C,
+.D .ensemble_D,
+.E .ensemble_E,
+.F .ensemble_F,
+.G .ensemble_G,
+.H .ensemble_H,
+.I .ensemble_I,
+.J .ensemble_J,
+.K .ensemble_K,
+.L .ensemble_L,
+.M .ensemble_M,
+.N .ensemble_N,
+.O .ensemble_O,
+.P .ensemble_P,
+.Q .ensemble_Q,
+.R .ensemble_R,
+.S .ensemble_S,
+.T .ensemble_T,
+.U .ensemble_U,
+.V .ensemble_V,
+.W .ensemble_W,
+.X .ensemble_X,
+.Y .ensemble_Y,
+.Z .ensemble_Z,
+.AA .ensemble_AA,
+.AB .ensemble_AB,
+.AC .ensemble_AC,
+.AD .ensemble_AD,
+.AE .ensemble_AE,
+.AF .ensemble_AF,
+.AG .ensemble_AG,
+.AH .ensemble_AH,
+.AI .ensemble_AI,
+.AJ .ensemble_AJ,
+.AK .ensemble_AK,
+.AL .ensemble_AL,
+.AM .ensemble_AM,
+.AN .ensemble_AN,
+.AO .ensemble_AO,
+.AP .ensemble_AP,
+.AQ .ensemble_AQ,
+.AR .ensemble_AR,
+.AS .ensemble_AS,
+.AT .ensemble_AT,
+.AU .ensemble_AU,
+.AV .ensemble_AV,
+.AW .ensemble_AW,
+.AX .ensemble_AX,
+.AY .ensemble_AY,
+.AZ .ensemble_AZ,
+.BA .ensemble_BA,
+.BB .ensemble_BB,
+.BC .ensemble_BC,
+.BD .ensemble_BD,
+.BE .ensemble_BE,
+.BF .ensemble_BF,
+.BG .ensemble_BG,
+.BH .ensemble_BH,
+.BI .ensemble_BI,
+.BJ .ensemble_BJ,
+.BK .ensemble_BK,
+.BL .ensemble_BL,
+.BM .ensemble_BM,
+.BN .ensemble_BN,
+.BO .ensemble_BO,
+.BP .ensemble_BP,
+.BQ .ensemble_BQ,
+.BR .ensemble_BR,
+.BS .ensemble_BS,
+.BT .ensemble_BT,
+.BU .ensemble_BU,
+.BV .ensemble_BV,
+.BW .ensemble_BW,
+.BX .ensemble_BX,
+.BY .ensemble_BY,
+.BZ .ensemble_BZ,
+.BÜ .ensemble_BÜ,
+.BÖ .ensemble_BÖ,
+.BÄ .ensemble_BÄ,
+.CA .ensemble_CA,
+.CB .ensemble_CB,
+.CC .ensemble_CC,
+.CD .ensemble_CD,
+.CE .ensemble_CE,
+.CF .ensemble_CF,
+.CG .ensemble_CG,
+.CH .ensemble_CH,
+.CI .ensemble_CI,
+.CJ .ensemble_CJ,
+.CK .ensemble_CK,
+.CL .ensemble_CL,
+.CM .ensemble_CM,
+.CN .ensemble_CN,
+.CO .ensemble_CO,
+.CP .ensemble_CP,
+.CQ .ensemble_CQ,
+.CR .ensemble_CR,
+.CS .ensemble_CS,
+.CT .ensemble_CT,
+.CU .ensemble_CU,
+.CV .ensemble_CV,
+.CW .ensemble_CW,
+.CX .ensemble_CX,
+.CY .ensemble_CY,
+.CZ .ensemble_CZ {
+    color: red;
+}
